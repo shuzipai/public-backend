@@ -1,0 +1,16 @@
+.box {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 20px 0px;
+    padding: 20px 20px 10px 10px;
+    background-color: #fff;
+}
+
+.input-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+    margin-left: 10px;
+}

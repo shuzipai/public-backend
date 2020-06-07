@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html {{ htmlAttributes }}>
+    <head>
+        {{ title | safe }}
+        {{ meta | safe }}
+        {{ link | safe }}
+        {{ link_tags | safe }}
+        {{ style_tags | safe }}
+    </head>
+    <body {{ bodyAttributes }}>
+        <div id='wrap' style='height:100%'>{{ body | safe }}</div>
+        {{ script_tags | safe }}
+    </body>
+</html>

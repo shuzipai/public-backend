@@ -1,0 +1,40 @@
+.system-name {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 64px;
+    color: #fff;
+    font-weight: bold;
+    font-size: 14px;
+    background-color: #002140;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 20px;
+  background-color: #fff;
+  ._left {
+    display: flex;
+    align-items: center;
+    ._title {
+      font-weight: bold;
+      font-size: 20px;
+      line-height: 1em;
+      height: 24px;
+    }
+  }
+}
+
+.user-login {
+  color: #333;
+}
+
+.logout {
+  color: #999;
+  cursor: pointer;
+  &:hover {
+    color: red;
+  }
+}

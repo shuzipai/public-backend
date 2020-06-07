@@ -1,0 +1,20 @@
+.table-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 20px 0px 0px;
+    padding: 20px;
+    font-size: 24px;
+    font-weight: bold;
+    background-color: #fafafa;
+    border-bottom: 1px solid #fff;
+}
+
+.action-box {
+    display: flex;
+    align-items: center;
+}
+
+.table {
+    margin: 0px 0px 20px;
+}
