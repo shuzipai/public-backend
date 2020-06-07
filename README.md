@@ -1,27 +1,15 @@
-# 魅客云 初始项目
-本项目意在初始化一个拥有基本调试功能，服务器端渲染的库  
-webpack4
-babel7
-react16.8
+# 项目搭建依赖脚手架：[meikeyun-create-app](https://gitee.com/shuzipai/meikeyun-create-app)
+一个我自己造的轮子，当初是以学习为主创造的，但是用着还可以，就用了一两年  
 
-## 环境变量
-IS_DEV 是否是开发环境('true')  
-IS_SSR 是否开启开启服务器端渲染('true')  
+# 基础配置：./client/worker/define.js  
+里面有注释，可以直接去注释里查看  
+配置好这个文件，就可以实现登录功能  
 
-## 项目配置说明
-主要的配置在config中，包含了服务器配置（app.config.js）和各种情况下的webpack配置  
-在服务器配置中：  
-1.SSR用来设置当前是否开启Server Side Render（服务器端渲染）  
-2.PORT是使用什么端口来运行静态资源服务（或渲染服务）  
-注：其他配置请勿改动  
+# 数据表配置：./client/schema/index.js
+此文件回返回一个schema对象，对象的属性代表一张表  
+attriutes：表字段属性，标记表内字段的名称、属性、以及在设置值的时候显示成什么(placeholder)  
+action：操作行文，包括：create、update、view、delete  
+show_rule：展示规则，在不同的操作里展示出来的字段或者可操作的字段  
+curd_api：操作数据使用的api，这里遵从restfulapi的规范：GET index、GET view、POST create、GET delete（也没有完全照搬method）  
 
-## 项目运行说明  
-先运行：npm i  
-开发环境运行：npm run dev 或 node ./server/dev.js  
-生产环境运行：npm run start 或 node ./server/index.js  
-打包APP运行：npm run build 或 node ./server/build.js  
-
-## Docker
-构建：sudo docker build -t public-backend . 
-移除：sudo docker stop public-backend && sudo docker rm public-backend 
-运行：sudo docker run -d --restart=always -p 3017:3005 --name=public-backend public-backend 
+当你设置好以上内容，这个后台管理系统就会正常运转了，虽然目前提供的功能并不完善，但是随着开发，这种通用的后台管理系统会极大程度的较少前端开发的成本，代码书写的不好、存在的BUG、规范不优秀、配置文件零散、运行效率低、各种问题都是可以优化，但是相比于强调的功能，这些是可以滞后的，也欢迎有人提意见，如果有人来看的话...  
